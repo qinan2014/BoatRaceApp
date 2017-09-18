@@ -1,14 +1,20 @@
 package com.aihelp.boatraceapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    SharedPreferences sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sp = this.getSharedPreferences("actm", Context.MODE_PRIVATE);
+
+
         setContentView(R.layout.activity_main);
 
     // Example of a call to a native method
